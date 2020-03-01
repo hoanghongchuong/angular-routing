@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+.selected{
+  color: #fff;
+  background: #232632;
+}
+.container{
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1000px;
+}

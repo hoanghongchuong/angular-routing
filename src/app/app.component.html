@@ -1,0 +1,8 @@
+angular router
+<nav>
+  <a routerLink="/home" routerLinkActive="selected"
+  [routerLinkActiveOptions]="{axact: true}">Home</a>
+  <a [routerLink]="['/about']" routerLinkActive="selected">About</a>
+  <a [routerLink]="['/product']" routerLinkActive="selected">Product</a>
+</nav>
+<router-outlet></router-outlet>
