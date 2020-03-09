@@ -9,6 +9,10 @@ const router: Routes = [
     component: HomeComponent
   },
   {
+    path: 'product',
+    loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
+  },
+  {
     path: 'about',
     component: AboutComponent
   },

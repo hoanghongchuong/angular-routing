@@ -2,6 +2,7 @@
 
 <ul>
   <li *ngFor="let product of productList">
-    <a (click)="detailProduct(product.id)">{{product.name}} - {{product.price | currency}}</a>
+    <a [routerLink]="['/product/', product.id]">{{product.name}} - {{product.price | currency}}</a>
+<!--    <a (click)="detailProduct(product.id)">{{product.name}} - {{product.price | currency}}</a>-->
   </li>
 </ul>

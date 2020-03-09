@@ -19,7 +19,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.titleService.setTitle('List product');
-    this.productService.getProductList().subscribe((res) => {
+    this.productService.getProductList().subscribe((res: IProduct[]) => {
       this.productList = res;
     });
     // dùng queryParamMap để lấy phần query vd: localhost:4200/product?orderby=price
@@ -31,9 +31,9 @@ export class ProductListComponent implements OnInit {
   }
 
   detailProduct(id) {
-    this.productService.findProductById(id).subscribe((res:IProduct) => {
-      this.productList = res;
-      console.log(this.productList);
-    })
+    this.productService.findProductById(id).subscribe((res) => {
+      // this.productList = res;
+      console.log(res);
+    });
   }
 }
